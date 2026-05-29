@@ -16,13 +16,27 @@ Developers shall treat log records as security-sensitive artifacts. They are wri
 
 The following events shall be captured in all applications handling regulated, sensitive, or business-critical data. This list aligns with PCI DSS 4.0 Requirement 10.2, HIPAA audit control expectations, NIST SP 800-53 AU-2, and OWASP ASVS V7.1.
 
-Authentication events must be logged in full: successful logins, failed login attempts, logouts, session creation and termination, password changes, multi-factor challenges and their outcomes, and account lockouts. Authorization events including access grants, access denials, privilege escalations, and role or permission changes must be captured. All administrative actions, including configuration changes, user provisioning, and security policy modifications, require logging. Access to sensitive data — defined as cardholder data, protected health information, personally identifiable information, authentication credentials, or cryptographic keys — must generate an audit record. Input validation failures, output encoding failures, and security control failures (including failed integrity checks and cryptographic operation failures) must be recorded. Application errors and exceptions that may indicate attack activity, including all uncaught exceptions reaching the application boundary, must be logged. Use of higher-risk functionality such as data export, bulk operations, and file uploads requires explicit logging. Startup, shutdown, and restart of the application and its logging subsystem must be captured.
+* Authentication events must be logged in full: successful logins, failed login attempts, logouts, session creation and termination, password changes, multi-factor challenges and their outcomes, and account lockouts. 
+* Authorization events including access grants, access denials, privilege escalations, and role or permission changes must be captured.
+* All administrative actions, including configuration changes, user provisioning, and security policy modifications, require logging.
+* Access to sensitive data defined as cardholder data, protected health information, personally identifiable information, authentication credentials, or cryptographic keys, must generate an audit record.
+* Input validation failures, output encoding failures, and security control failures (including failed integrity checks and cryptographic operation failures) must be recorded.
+* Application errors and exceptions that may indicate attack activity, including all uncaught exceptions reaching the application boundary, must be logged.
+* Use of higher-risk functionality such as data export, bulk operations, and file uploads requires explicit logging.
+* Startup, shutdown, and restart of the application and its logging subsystem must be captured.
 
 ## 4. Required Log Record Content
 
 Each log record shall contain, at minimum, the following fields, consistent with PCI DSS 4.0 Requirement 10.2.2 and NIST SP 800-53 AU-3:
 
-A timestamp in ISO 8601 format with timezone offset or expressed in UTC. A unique event identifier or correlation ID enabling cross-system event tracing. The event type or category. The identity of the user or service principal associated with the event, or an explicit indicator of anonymity where applicable. The source of the event, including hostname, process identifier, and source IP address where relevant. The action attempted and its outcome (success, failure, error). The resource or object affected. The severity level. The application name and version.
+* A timestamp in ISO 8601 format with timezone offset or expressed in UTC. 
+* A unique event identifier or correlation ID enabling cross-system event tracing.
+* The event type or category.
+* The identity of the user or service principal associated with the event, or an explicit indicator of anonymity where applicable.
+* The source of the event, including hostname, process identifier, and source IP address where relevant.
+* The action attempted and its outcome (success, failure, error). The resource or object affected.
+* The severity level.
+* The application name and version.
 
 System clocks shall be synchronized via NTP from an authoritative time source. Clock drift exceeding acceptable tolerance (typically one second for systems in PCI scope per Requirement 10.6) must itself generate an alert.
 
@@ -30,7 +44,12 @@ System clocks shall be synchronized via NTP from an authoritative time source. C
 
 The following categories of data are prohibited from appearing in log records under any circumstance, whether by direct logging, exception traces, debug output, or third-party library logging:
 
-Passwords, passphrases, and password hashes in any form. Authentication tokens, session identifiers, API keys, OAuth tokens, JWTs, and refresh tokens. Cryptographic keys, key material, initialization vectors paired with ciphertext, and seeds. Full primary account numbers (PAN); if PAN must appear for operational reasons, it shall be masked to display at most the first six and last four digits, per PCI DSS 4.0 Requirement 3.4. Card verification values (CVV/CVV2/CID), PIN blocks, and full magnetic stripe data are prohibited from storage in any form, including logs, per PCI DSS 4.0 Requirement 3.2. Protected health information beyond the minimum necessary for the operational purpose of the log. Social Security numbers, government identifiers, and full dates of birth. Personal contact information that is not required for the event's audit purpose.
+* Passwords, passphrases, and password hashes in any form.
+* Authentication tokens, session identifiers, API keys, OAuth tokens, JWTs, and refresh tokens.
+* Cryptographic keys, key material, initialization vectors paired with ciphertext, and seeds.
+* Full primary account numbers (PAN); if PAN must appear for operational reasons, it shall be masked to display at most the first six and last four digits, per PCI DSS 4.0 Requirement 3.4. Card verification values (CVV/CVV2/CID), PIN blocks, and full magnetic stripe data are prohibited from storage in any form, including logs, per PCI DSS 4.0 Requirement 3.2.
+* Protected health information beyond the minimum necessary for the operational purpose of the log. Social Security numbers, government identifiers, and full dates of birth.
+* Personal contact information that is not required for the event's audit purpose.
 
 Where a field of this type is unavoidable in a log context — for example, a username that may itself be sensitive — it shall be hashed, tokenized, or truncated before being written. Developers shall not rely on log redaction as a primary control; sensitive values should be excluded at the call site.
 
