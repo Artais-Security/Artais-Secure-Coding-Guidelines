@@ -22,41 +22,41 @@ The guidelines are written to be opinionated where the standards permit a choice
 | # | Guideline | Status |
 |---|---|---|
 | 01 | [Application Logging](./01-application-logging.md) | ✅ Done |
-| 02 | Input Validation and Output Encoding | ⬜ TODO |
-| 03 | Authentication | ⬜ TODO |
-| 04 | Session Management | ⬜ TODO |
-| 05 | Access Control and Authorization | ⬜ TODO |
-| 06 | Cryptography and Key Management | ⬜ TODO |
-| 07 | Secrets Management | ⬜ TODO |
-| 08 | Error and Exception Handling | ⬜ TODO |
-| 09 | Data Protection (At Rest and In Transit) | ⬜ TODO |
-| 10 | Database Access and Query Construction | ⬜ TODO |
-| 11 | File Handling and Uploads | ⬜ TODO |
-| 12 | Memory Management and Safe Concurrency | ⬜ TODO |
-| 13 | API Security (REST, GraphQL, gRPC) | ⬜ TODO |
-| 14 | Web Application Security Headers | ⬜ TODO |
-| 15 | Cookies and Browser Storage | ⬜ TODO |
-| 16 | Cross-Origin Resource Sharing (CORS) | ⬜ TODO |
-| 17 | Content Security Policy (CSP) | ⬜ TODO |
-| 18 | Server-Side Request Forgery (SSRF) Prevention | ⬜ TODO |
-| 19 | Deserialization and Object Injection | ⬜ TODO |
-| 20 | Dependency and Supply Chain Security | ⬜ TODO |
-| 21 | Software Bill of Materials (SBOM) | ⬜ TODO |
-| 22 | Build, CI/CD, and Release Integrity | ⬜ TODO |
-| 23 | Container and Image Security | ⬜ TODO |
-| 24 | Infrastructure as Code (IaC) Security | ⬜ TODO |
-| 25 | Cloud Configuration and IAM | ⬜ TODO |
-| 26 | Secure Defaults and Configuration Management | ⬜ TODO |
-| 27 | Rate Limiting, Quotas, and Abuse Prevention | ⬜ TODO |
-| 28 | Denial of Service Resilience | ⬜ TODO |
-| 29 | Threat Modeling Practice | ⬜ TODO |
-| 30 | Security Testing (SAST, DAST, IAST, SCA) | ⬜ TODO |
-| 31 | Code Review for Security | ⬜ TODO |
-| 32 | Vulnerability Disclosure and Patch Management | ⬜ TODO |
-| 33 | Incident Response Hooks in Application Code | ⬜ TODO |
-| 34 | Privacy by Design (GDPR, CCPA) | ⬜ TODO |
-| 35 | Mobile Application Security | ⬜ TODO |
-| 36 | LLM and AI Integration Security | ⬜ TODO |
+| 02 | Input Validation and Output Encoding | ✅ Done |
+| 03 | Authentication | ✅ Done |
+| 04 | Session Management | ✅ Done |
+| 05 | Access Control and Authorization | ✅ Done |
+| 06 | Cryptography and Key Management | ✅ Done |
+| 07 | Secrets Management | ✅ Done |
+| 08 | Error and Exception Handling | ✅ Done |
+| 09 | Data Protection (At Rest and In Transit) | ✅ Done |
+| 10 | Database Access and Query Construction | ✅ Done |
+| 11 | File Handling and Uploads | ✅ Done |
+| 12 | Memory Management and Safe Concurrency | ✅ Done |
+| 13 | API Security (REST, GraphQL, gRPC) | ✅ Done |
+| 14 | Web Application Security Headers | ✅ Done |
+| 15 | Cookies and Browser Storage | ✅ Done |
+| 16 | Cross-Origin Resource Sharing (CORS) | ✅ Done |
+| 17 | Content Security Policy (CSP) | ✅ Done |
+| 18 | Server-Side Request Forgery (SSRF) Prevention | ✅ Done |
+| 19 | Deserialization and Object Injection | ✅ Done |
+| 20 | Dependency and Supply Chain Security | ✅ Done |
+| 21 | Software Bill of Materials (SBOM) | ✅ Done |
+| 22 | Build, CI/CD, and Release Integrity | ✅ Done |
+| 23 | Container and Image Security | ✅ Done |
+| 24 | Infrastructure as Code (IaC) Security | ✅ Done |
+| 25 | Cloud Configuration and IAM | ✅ Done |
+| 26 | Secure Defaults and Configuration Management | ✅ Done |
+| 27 | Rate Limiting, Quotas, and Abuse Prevention | ✅ Done |
+| 28 | Denial of Service Resilience | ✅ Done |
+| 29 | Threat Modeling Practice | ✅ Done |
+| 30 | Security Testing (SAST, DAST, IAST, SCA) | ✅ Done |
+| 31 | Code Review for Security | ✅ Done |
+| 32 | Vulnerability Disclosure and Patch Management | ✅ Done |
+| 33 | Incident Response Hooks in Application Code | ✅ Done |
+| 34 | Privacy by Design (GDPR, CCPA) | ✅ Done |
+| 35 | Mobile Application Security | ✅ Done |
+| 36 | LLM and AI Integration Security | ✅ Done |
 
 Open items are tracked on the project board. Contributions and proposed sections are welcome via pull request.
 
